@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Random password generator</title>
+</head>
+
+<body>
+    <main class="main-content">
+        <section class="main-wrapper">
+            <h1 class="heading">Generate a<br>
+                <span class="green-heading">random password</span>
+            </h1>
+            <h3 class="text-gray">Never use an insecure password again.</h2>
+                <div class="btn-section">
+                    <div class="gnr-and-increment-btn">
+                        <button id="generate-btn">Generate Password</button>
+                        <form action="">
+                            <input type="number" id="num-renderer" value="15" min="15" max="30" />
+                        </form>
+                    </div>
+                    <div class="num-and-symbol-wrapper">
+                        <input type="checkbox" id="has-numbers" name="vehicle1" value="nubers">
+                        <label for="has-number">Number</label>
+                        <input type="checkbox" id="has-symbols" name="vehicle1" value="symbols">
+                        <label for="has-symbols">Symbols</label>
+                    </div>
+                    
+                </div>
+                <hr>
+                <textarea name="" placeholder="Click here to copy" id="password-display" cols="23" rows="1"></textarea>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
