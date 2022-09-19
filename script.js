@@ -66,7 +66,7 @@ copyBtnEl.addEventListener('click', copyToClipboard)
 function copyToClipboard(){
     if(!passwordDisplayEl.value == ""){
         passwordDisplayEl.select()
-        passwordDisplayEl.setSelectionRange(0, 99999)
+        document.execCommand("copy")
         navigator.clipboard.writeText(passwordDisplayEl.value);
         alert("Copied the text: " + passwordDisplayEl.value)
     }
