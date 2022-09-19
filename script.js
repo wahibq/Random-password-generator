@@ -65,9 +65,8 @@ function generatePassword(){
 copyBtnEl.addEventListener('click', copyToClipboard)
 function copyToClipboard(){
     if(!passwordDisplayEl.value == ""){
-        passwordDisplayEl.select()
-        document.execCommand("copy")
-        navigator.clipboard.writeText(passwordDisplayEl.value);
-        alert("Copied the text: " + passwordDisplayEl.value)
+        navigator.clipboard.writeText(password).then(()=>{
+            alert("password copied to clipboard")
+        })
     }
 }
