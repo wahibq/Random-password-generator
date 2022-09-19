@@ -34,7 +34,7 @@ body {
     color: grey;
     font-weight: lighter;
 }
-.btn-section {
+.filter-wrapper {
     display: flex;
     margin-top: 1.5em;
     align-items: center;
@@ -46,18 +46,32 @@ body {
     background-color: var(--green);
     color: white;
     border-style: none;
+    margin-top: 10px;
 }
-.gnr-and-increment-btn {
-    display: flex;
+input[type="number"] {
+    -moz-appearance: textfield;
 }
 #num-renderer {
     background-color: #2f3e53;
     color: white;
     font-size: 1.12em;
-    padding: 0.5em 0.3em;
+    padding: 0.125em 0.3em;
     border: none;
-    border-radius: 6px;
-    margin-left: 10px;
+    width: 50px;
+}
+#increment-btn{
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+#decrement-btn{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+#increment-btn, #decrement-btn{
+    background-color: var(--green);
+    border: 1px solid;
+    padding: 0.125em 0.3em;
+    font-size: 1.01em;
 }
 #has-numbers,
 #has-symbols,
@@ -70,13 +84,23 @@ hr {
     border-style: none;
     background-color: #2f3e53;
 }
-#password-display {
+.result-sec{
     margin-top: 1.5em;
+}
+.result-sec > button{
+    margin-left: 10px;
+    padding: .5em;
+    background-color: var(--green);
+    border-radius: 6px;
+    border: none;
+}
+#password-display {
     background-color: #273549;
     border-style: none;
     border-radius: 5px;
     font-size: 1.5em;
     padding: 0.3em;
+    width: 220px;
     color: var(--green);
 }
 @media screen and (max-width: 790px) {
@@ -84,14 +108,12 @@ hr {
         height: 90vh;
     }
     .main-content {
-        width: 90vw;
+        max-width: 90vw;
     }
     .main-wrapper {
         margin: 1.35em;
     }
-    .btn-section {
-        display: flex;
-        margin-top: 1.5em;
+    .filter-wrapper {
         align-items: flex-start;
         flex-direction: column;
     }
