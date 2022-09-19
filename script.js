@@ -70,3 +70,7 @@ function copyToClipboard(){
         })
     }
 }
+//for mozilla
+function resetInputVal(){
+    passwordDisplayEl.value = ""
+}
