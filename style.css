@@ -48,6 +48,10 @@ body {
     border-style: none;
     margin-top: 10px;
 }
+#generate-btn:active{
+    transform: scale(.98,.98);
+    transition: transform .01s ;
+}
 input[type="number"] {
     -moz-appearance: textfield;
 }
@@ -73,6 +77,10 @@ input[type="number"] {
     padding: 0.125em 0.3em;
     font-size: 1.01em;
 }
+#increment-btn:active, #decrement-btn:active{
+    transform: scale(.98,.98);
+    transition: transform .01s ;
+}
 #has-numbers,
 #has-symbols,
 label {
@@ -87,12 +95,16 @@ hr {
 .result-sec{
     margin-top: 1.5em;
 }
-.result-sec > button{
+#copy-btn{
     margin-left: 10px;
     padding: .5em;
     background-color: var(--green);
     border-radius: 6px;
     border: none;
+}
+#copy-btn > svg:active{
+    transform: scale(.9,.9);
+    transition: transform .01s ;
 }
 #password-display {
     background-color: #273549;
