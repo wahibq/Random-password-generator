@@ -3,7 +3,9 @@ let passwordDisplayEl = document.getElementById("password-display")
 let numRendererBoxEl = document.getElementById("num-renderer")
 let numCheckBoxEl = document.getElementById("has-numbers")
 let symbolsCheckBoxEl = document.getElementById("has-symbols")
-
+let incrementBtnEl = document.getElementById("increment-btn")
+let decrementBtnEl = document.getElementById("decrement-btn")
+let copyBtnEl = document.getElementById("copy-btn")
 const characters =["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 let password = ""
@@ -21,9 +23,22 @@ for(let i = 0; i < characters.indexOf("z") + 1; i++){
 for(let i = 62; i < characters.length; i++){
     symbolsOnly.push(characters[i])
 }
-let charWithNumbers = [charWithoutSymbols]
 let charWithSymbols = [...symbolsOnly, ...charWithoutNumbers]
-
+let charCount = 15
+incrementBtnEl.addEventListener('click', charCountIncrementer)
+decrementBtnEl.addEventListener('click', charCountDecrementer)
+function charCountIncrementer(){
+    if(charCount < 30){
+        charCount += 1
+        numRendererBoxEl.value = charCount
+    }
+}
+function charCountDecrementer(){
+    if(charCount >=16 ){
+        charCount -- 
+        numRendererBoxEl.value = charCount
+    }
+}
 generateBtnEl.addEventListener('click', generatePassword)
 function generatePassword(){
     let renderBoxValue = parseInt(numRendererBoxEl.value)
@@ -45,12 +60,14 @@ function generatePassword(){
             let generatedPassword = characters[Math.floor(Math.random()*characters.length)]
             password +=  generatedPassword
         }
-    passwordDisplayEl.innerText = password
+    passwordDisplayEl.value = password
 }
-passwordDisplayEl.addEventListener('click', copyToClipboard)
+copyBtnEl.addEventListener('click', copyToClipboard)
 function copyToClipboard(){
     if(!passwordDisplayEl.value == ""){
+        passwordDisplayEl.select()
+        passwordDisplayEl.setSelectionRange(0, 99999)
         navigator.clipboard.writeText(passwordDisplayEl.value);
-        alert(`password: ${passwordDisplayEl.value} copied to clipboard `)
+        alert("Copied the text: " + passwordDisplayEl.value)
     }
 }
