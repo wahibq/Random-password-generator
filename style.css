@@ -20,7 +20,9 @@ body {
 .main-content {
     background-color: #ecfdf5;
     max-width: 75vw;
+    transition: all .2s ease;
 }
+
 .main-wrapper {
     margin: 3em;
 }
@@ -114,6 +116,28 @@ hr {
     padding: 0.3em;
     width: 220px;
     color: var(--green);
+}
+/* stylings for dark mode */
+.theme-div{
+    max-width: 75vw;
+}
+.theme-btn{
+    position: absolute;
+    top: 2em;
+    font-size: 1.12em;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    background-color: var(--green);
+    color: white;
+    border-style: none;
+}
+.dark-mode{
+    background-color: #1F2937;
+    transition: all .2s ease;
+}
+.light-heading{
+    color: white;
+    transition: all .3s ease;
 }
 @media screen and (max-width: 790px) {
     body {
