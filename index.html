@@ -9,7 +9,13 @@
     <title>Random password generator</title>
 </head>
 
-<body onload="resetInputVal()" >
+<body onload="resetInputVal()">
+    <!-- element for theme -->
+    <div class="theme-div">
+        <button class="theme-btn">
+            Dark
+        </button>
+    </div>
     <main class="main-content">
         <section class="main-wrapper">
             <h1 class="heading">Generate a<br>
@@ -25,9 +31,9 @@
                     </div>
                     <div class="num-and-symbol-wrapper">
                         <input type="checkbox" id="has-numbers" name="vehicle1" value="nubers">
-                        <label for="has-number">Numbers</label>
+                        <label id="number-label" for="has-number">Numbers</label>
                         <input type="checkbox" id="has-symbols" name="vehicle1" value="symbols">
-                        <label for="has-symbols">Symbols</label>
+                        <label id="symbol-label" for="has-symbols">Symbols</label>
                     </div>
                 </div>
                 <hr>
@@ -40,8 +46,6 @@
                         </svg>
                     </button>
                 </div>
-
-
         </section>
     </main>
     <script src="script.js"></script>
