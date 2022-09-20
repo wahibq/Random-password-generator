@@ -20,7 +20,7 @@ body {
 .main-content {
     background-color: #ecfdf5;
     max-width: 75vw;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 }
 
 .main-wrapper {
@@ -50,9 +50,9 @@ body {
     border-style: none;
     margin-top: 10px;
 }
-#generate-btn:active{
-    transform: scale(.98,.98);
-    transition: transform .01s ;
+#generate-btn:active {
+    transform: scale(0.98, 0.98);
+    transition: transform 0.01s;
 }
 input[type="number"] {
     -moz-appearance: textfield;
@@ -65,23 +65,25 @@ input[type="number"] {
     border: none;
     width: 50px;
 }
-#increment-btn{
+#increment-btn {
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
 }
-#decrement-btn{
+#decrement-btn {
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
 }
-#increment-btn, #decrement-btn{
+#increment-btn,
+#decrement-btn {
     background-color: var(--green);
     border: 1px solid;
     padding: 0.125em 0.3em;
     font-size: 1.01em;
 }
-#increment-btn:active, #decrement-btn:active{
-    transform: scale(.98,.98);
-    transition: transform .01s ;
+#increment-btn:active,
+#decrement-btn:active {
+    transform: scale(0.98, 0.98);
+    transition: transform 0.01s;
 }
 #has-numbers,
 #has-symbols,
@@ -94,19 +96,19 @@ hr {
     border-style: none;
     background-color: #2f3e53;
 }
-.result-sec{
+.result-sec {
     margin-top: 1.5em;
 }
-#copy-btn{
+#copy-btn {
     margin-left: 10px;
-    padding: .5em;
+    padding: 0.5em;
     background-color: var(--green);
     border-radius: 6px;
     border: none;
 }
-#copy-btn > svg:active{
-    transform: scale(.9,.9);
-    transition: transform .01s ;
+#copy-btn > svg:active {
+    transform: scale(0.9, 0.9);
+    transition: transform 0.01s;
 }
 #password-display {
     background-color: #273549;
@@ -118,10 +120,10 @@ hr {
     color: var(--green);
 }
 /* stylings for dark mode */
-.theme-div{
+.theme-div {
     max-width: 75vw;
 }
-.theme-btn{
+.theme-btn {
     position: absolute;
     top: 2em;
     font-size: 1.12em;
@@ -130,14 +132,19 @@ hr {
     background-color: var(--green);
     color: white;
     border-style: none;
+    width: 80px;
 }
-.dark-mode{
-    background-color: #1F2937;
-    transition: all .2s ease;
+.theme-btn:active {
+    transform: scale(0.98, 0.98);
+    transition: transform 0.01s;
 }
-.light-heading{
+.dark-mode {
+    background-color: #1f2937;
+    transition: all 0.2s ease;
+}
+.light-heading {
     color: white;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 }
 @media screen and (max-width: 790px) {
     body {
